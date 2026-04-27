@@ -52,11 +52,22 @@ const user = [
 ]
 
 user[1].email
-console.log(gptuser);
+// console.log(gptuser);
 
 
-console.log(Object.keys(gptuser));//returns an array of keys of the object 
-console.log(Object.values(gptuser));//returns an array of values of the object 
-console.log(Object.entries(gptuser));//returns an array of key-value pairs of the object 
+// console.log(Object.keys(gptuser));//returns an array of keys of the object 
+// console.log(Object.values(gptuser));//returns an array of values of the object 
+// console.log(Object.entries(gptuser));//returns an array of key-value pairs of the object 
 
-console.log(gptuser.hasOwnProperty('i'));
+// console.log(gptuser.hasOwnProperty('i'));
+
+const concertTix = {
+    concertName: "Coldplay",
+    concertDate: "2023-09-15",
+    venue: "Madison Square Garden",
+    price: 150,
+    isAvailable: true,
+}
+
+const {concertName:name} = concertTix;
+console.log(name);
