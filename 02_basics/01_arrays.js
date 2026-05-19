@@ -16,9 +16,9 @@ const arr1 = new Array(0, 2, 4, 6, 8);
 //  console.log(arr.includes(7));
 //  console.log(arr.indexOf(13));
  
-// const newArr = arr.join();
-// console.log(arr);
-// console.log(newArr);
+const newArr = arr.join();
+console.log(arr);
+console.log(newArr);
 
 
 // -----slice,splice------

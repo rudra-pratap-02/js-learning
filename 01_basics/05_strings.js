@@ -12,8 +12,8 @@ const gameId = new String('d-r-a-g-o')
 // console.log(gameId.toUpperCase());
 
 
-console.log(gameId.charAt(3));
-console.log(gameId.indexOf('r'));
+// console.log(gameId.charAt(6));
+// console.log(gameId.indexOf('r'));
 
 const newString = gameId.substring(0, 2)
 console.log(newString);
