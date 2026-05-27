@@ -10,11 +10,33 @@ const array = ["a", "b", "c"];
     
 // }
 
-const greeting = "Hello";
+const greeting = "Hello Veere";
 
 for (const greet of greeting) {
-    console.log(`Each char is ${greet}`);
+    // console.log(`Each char is ${greet}`);
     
 }
 
-for (const char of "Hello") {
+const map = new Map();
+map.set('a', 1);
+map.set('b', 2);
+map.set('c', 3);
+map.set('a', 1);
+map.set('a', 1);
+
+// console.log(map);
+
+for (const [key, value] of map) {
+    console.log(key, ':-', value);
+    
+}
+
+const myObject = {
+    'name': "Veere",
+    'name2': "veere2"
+}
+
+for (const [key, value] of myObject) {
+    console.log(key, ':-', value);
+    
+}
