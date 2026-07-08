@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM last</title>
+</head>
+<body style="background-color: rgb(37, 37, 37) ; color: white;">
+    <ul class="languages">
+        <li>JavaScript</li>
+        <li>C++</li>
+
+
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = langName;
+        document.querySelector('.languages').appendChild(li);
+         
+    }
+
+    addLanguage('Python')
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.languages').appendChild(li);
+    }
+
+    addOptiLanguage("Java");
+
+    // Edit
+
+    const thirdLang = document.querySelector("li:nth-child(3)");
+    // thirdLang.innerHTML = "C#";
+    const newli = document.createElement('li')
+    newli.textContent = "ruby"; 
+    // document.querySelector('.languages').replaceChild(newli, thirdLang);
+    thirdLang.replaceWith(newli);
+
+    // Edit
+
+    const firstLang = document.querySelector("li:nth-child(1)");
+    firstLang.outerHTML = "<li>Typescript</li>";
+
+    // remove
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+    secondLang.remove()
+</script>
+
+</html>
