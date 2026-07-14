@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #131313; color: aliceblue;">
+    <button class="getinfo"> get info</button>
+    <div class="image">
+
+    </div>
+    <div class="url" ></div>
+</body>
+
+<script>
+    const requestUrl = "https://api.github.com/users/rudra-pratap-02";
+
+    const getInfo = document.querySelector('.getinfo');
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+
+            console.log(data);
+            console.log(data.followers);
+            getInfo.addEventListener('click',function(){
+                const img1 = data.avatar_url;
+            const url = data.html_url;
+
+            const image = document.querySelector('.image') ;
+            const link = document.querySelector('.url');
+
+            image.innerHTML = `<img src="${img1}">`;
+            link.innerHTML = `<a href = "${url}"><button class="url" ; style ="background-color: rgb(17, 71, 165);  color: whitesmoke">Go to profile</button></a> `;
+
+            document.querySelector('.getinfo').style.display = "none";
+            })
+            
+
+            
+        }    
+
+    }
+    
+    
+    xhr.send()
+
+</script>
+</html>
